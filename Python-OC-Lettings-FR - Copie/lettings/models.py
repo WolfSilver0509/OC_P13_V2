@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinLengthValidator
 
+
 class Addresse(models.Model):
     number = models.PositiveIntegerField(validators=[MaxValueValidator(9999)])
     street = models.CharField(max_length=64)
@@ -19,5 +20,3 @@ class Letting(models.Model):
 
     def __str__(self):
         return self.title
-
-

@@ -1,6 +1,7 @@
 from django.test import TestCase
 # commentaires
 
+
 def test_dummy():
     assert 1
 
