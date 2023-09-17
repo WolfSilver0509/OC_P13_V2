@@ -1,10 +1,6 @@
 name: Github Action Workflow pour P13 OC
 
-on:
-  push:
-    branches:
-      - master # Déclenche uniquement lorsque des modifications sont apportées à la branche master
-
+on: push
 jobs:
   django-tests:
     runs-on: ubuntu-latest
