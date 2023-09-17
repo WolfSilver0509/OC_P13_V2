@@ -7,6 +7,7 @@ def test_dummy():
 
 
 class IndexViewTestCase(TestCase):
+    """ Classe de test pour la page d'accueil """
 
     def test_index(self):
         """ Test pour la page d'accueil """

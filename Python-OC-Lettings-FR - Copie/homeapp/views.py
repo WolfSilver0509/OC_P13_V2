@@ -12,4 +12,7 @@ enim cursus in. Praesent volutpat porttitor magna, non finibus neque cursus id.
 
 
 def index(request):
+    """
+    Cette fonction permet de renvoyer la page d'accueil
+    """
     return render(request, 'index.html')

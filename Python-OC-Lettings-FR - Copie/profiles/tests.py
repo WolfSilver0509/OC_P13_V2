@@ -3,6 +3,7 @@ from django.urls import reverse
 
 
 class ProfilesTestCase(TestCase):
+    """ Test pour les vues de l'application 'profiles'"""
 
     fixtures = ['auth.json', 'profiles.json']
 

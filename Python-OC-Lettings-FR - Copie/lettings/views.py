@@ -18,6 +18,10 @@ luctus et ultrices posuere cubilia curae; Cras eget scelerisque
 
 
 def index(request):
+    """ Cette vue récupère tous les objets Letting de la base de données et les passe
+        au modèle de template 'lettings/index.html' pour affichage. Le contexte
+        contient une list ('lettings_list') pour une utilisation
+        dans le modèle de template. """
     lettings_list = Letting.objects.all()
     context = {'lettings_list': lettings_list}
     return render(request, 'lettings/index.html', context)
@@ -40,6 +44,10 @@ ac lacinia augue pulvinar sit amet. """
 
 
 def letting(request, letting_id):
+    """ Cette vue récupère un objet Letting de la base de données et le passe
+        au modèle de template 'lettings/letting.html' pour affichage. Le contexte
+        contient une list ('lettings_list') pour une utilisation
+        dans le modèle de template. """
     letting = Letting.objects.get(id=letting_id)
     context = {
         'title': letting.title,

@@ -1,31 +1,36 @@
 from django.shortcuts import render
 from .models import Profile
 
-"""
-Aenean leo magna, vestibulum et tincidunt fermentum, consectetur quis velit.
-Sed non placerat massa. Integer est nunc, pulvinar a
-tempor et, bibendum id arcu. Vestibulum ante ipsum primis in faucibus orci
-luctus et ultrices posuere cubilia curae; Cras eget scelerisque
-"""
-
 
 def index(request):
+    """
+    Affiche la liste des profils d'utilisateurs.
+
+    Cette vue récupère tous les profils d'utilisateurs à partir de la base de données
+    et les passe au modèle de template 'profiles/index.html' pour affichage.
+
+    Pour afficher la liste des profils d'utilisateurs, appelez cette vue en utilisant
+    la route '/profiles/' dans votre application Django.
+
+    """
     profiles_list = Profile.objects.all()
     context = {'profiles_list': profiles_list}
     return render(request, 'profiles/index.html', context)
 
 
-"""
-Aliquam sed metus eget nisi tincidunt ornare accumsan eget lac
-laoreet neque quis, pellentesque dui. Nullam facilisis pharetra
-vulputate. Sed tincidunt, dolor id facilisis fringilla,
-eros leo tristique lacus,
-it. Nam aliquam dignissim congue. Pellentesque
-habitant morbi tristique senectus et netus et males
-"""
-
-
 def profile(request, username):
+    """
+    Affiche le profil d'un utilisateur spécifique.
+
+    Cette vue récupère le profil d'un utilisateur spécifique à partir de la base de données
+    en fonction de son nom d'utilisateur ('username') et le passe au modèle de template
+    'profiles/profile.html' pour affichage.
+
+    Pour afficher le profil d'un utilisateur spécifique, appelez cette vue en utilisant
+    une route qui inclut le nom d'utilisateur comme paramètre, par exemple,
+    '/profiles/johndoe/'.
+
+    """
     profile = Profile.objects.get(user__username=username)
     context = {'profile': profile}
     return render(request, 'profiles/profile.html', context)
