@@ -5,7 +5,7 @@ FROM python:3.9
 WORKDIR /app
 
 # Copiez le contenu du répertoire de votre projet Django dans le conteneur
-COPY . /app/
+COPY Python-OC-Lettings-FR /app/
 
 # Copie du fichier. env pour les variables secretes
 COPY .env.docker .env
