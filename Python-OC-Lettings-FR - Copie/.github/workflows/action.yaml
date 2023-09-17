@@ -1,11 +1,9 @@
-name: workflow P13 django OC
+name: Deploy to Docker Hub
 
 on:
   push:
     branches:
       - master # Déclenche uniquement lorsque des modifications sont apportées à la branche master
-
-
 
 jobs:
   django_test:
@@ -50,7 +48,7 @@ jobs:
       - name: Push Docker image to Docker Hub
         run: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker push nom_de_votre_image:tag
+          docker push docker_oc_lettings:latest # Utilisez le même nom que dans docker build
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
