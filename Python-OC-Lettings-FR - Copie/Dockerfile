@@ -1,23 +1,23 @@
-# Utilisation d'une image Python officielle en tant qu'image de base
-FROM python:3.11
+# Utilisez une image de base Python
+FROM python:3.9
 
-# Définition du répertoire de travail dans le conteneur
+# Définissez le répertoire de travail dans le conteneur
 WORKDIR /app
 
-# Copie du fichier requirements.txt dans le conteneur
-COPY requirements.txt .
+# Copiez le contenu du répertoire de votre projet Django dans le conteneur
+COPY . /app/
 
 # Copie du fichier. env pour les variables secretes
 COPY .env.docker .env
 
-# Installation des dépendances Python
+# Installez les dépendances
 RUN pip install -r requirements.txt
 
-# Copie du reste du code source dans le conteneur
-COPY . .docker
+# Exécutez les migrations et créez la base de données
+RUN python manage.py migrate
 
-# Exposition du port sur lequel l'application Django écoute
+# Exposez le port sur lequel l'application Django s'exécute
 EXPOSE 8000
 
-# Commande pour exécuter l'application Django
+# Lancez l'application Django
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
