@@ -4,6 +4,10 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+
+# Utilisez la variable d'environnement PORT fournie par Heroku, ou 8000 par défaut en développement
+PORT = int(os.environ.get("PORT", 8000))
+
 # Chargement des variables d'environnement depuis le fichier .env
 load_dotenv()
 
