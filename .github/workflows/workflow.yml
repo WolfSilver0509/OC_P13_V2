@@ -72,5 +72,5 @@ jobs:
 
       - name: Deploy to VPS
         run: |
-          ssh ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }} "docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} && docker pull glaxer/docker_oc_lettings:latest && docker stop $(docker ps -q) && docker rm $(docker ps -a -q) && docker run -d -p 8000:8000 glaxer/docker_oc_lettings:latest"
-      
+          ssh ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }} "docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} && docker ps -q | xargs -r docker stop && docker ps -q -a | xargs -r docker rm && docker run -d -p 8000:8000 glaxer/docker_oc_lettings:latest"
+
