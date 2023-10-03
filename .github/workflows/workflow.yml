@@ -70,11 +70,16 @@ jobs:
           ssh-keyscan -t rsa ${{ secrets.VPS_IP }} >> ~/.ssh/known_hosts
           ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 
+      - name: Purge old Docker containers and images
+        run: |
+          ssh ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }} "docker stop \$(docker ps -q)"
+          ssh ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }} "docker rm \$(docker ps -a -q)"
+          ssh ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }} "docker rmi \$(docker images -q)"
+
       - name: Deploy to VPS
         run: |
           ssh ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }} "docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}" &&
-          docker ps -q | xargs -r docker stop &&
-          docker ps -q -a | xargs -r docker rm &&
           docker pull glaxer/docker_oc_lettings:latest &&
           docker run -d -p 8000:8000 glaxer/docker_oc_lettings:latest &&
           docker ps
+  
