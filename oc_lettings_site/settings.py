@@ -4,6 +4,18 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+import sentry_sdk
+
+sentry_sdk.init(
+    dsn=os.getenv('DNS'),
+    # Set traces_sample_rate to 1.0 to capture 100%
+    # of transactions for performance monitoring.
+    traces_sample_rate=1.0,
+    # Set profiles_sample_rate to 1.0 to profile 100%pip install load-dotenv
+    # of sampled transactions.
+    # We recommend adjusting this value in production.
+    profiles_sample_rate=1.0,
+)
 
 # Utilisez la variable d'environnement PORT fournie par Heroku, ou 8000 par défaut en développement
 PORT = int(os.environ.get("PORT", 8000))
