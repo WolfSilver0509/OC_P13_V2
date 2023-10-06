@@ -7,7 +7,7 @@ WORKDIR /app
 # Copiez le contenu du répertoire de votre projet Django dans le conteneur
 COPY  . .
 
-COPY static /app/static
+COPY static /app/staticfiles
 
 # Copie du fichier. env pour les variables secretes
 COPY .env.docker .env
