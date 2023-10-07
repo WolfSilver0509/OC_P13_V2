@@ -4,8 +4,6 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-from whitenoise.middleware import WhiteNoiseMiddleware
-
 import sentry_sdk
 
 sentry_sdk.init(
