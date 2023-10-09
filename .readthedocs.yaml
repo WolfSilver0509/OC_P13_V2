@@ -11,15 +11,12 @@ build:
   tools:
     python: "3.11"
 
-# Construction de la documentation dans le répertoire "doc/" avec Sphinx
+# Construisez la documentation dans le répertoire "docs/" avec Sphinx
 sphinx:
-   configuration: doc/conf.py
+   configuration: docs/conf.py
 
-# Déclenchez la construction automatiquement à chaque mise à jour du référentiel
-autobuild:
-   version: latest
-
-
+# Facultatif mais recommandé, déclarez les exigences Python requises
+# pour construire votre documentation
 python:
    install:
-   - requirements: requirements.txt
+   - requirements: docs/requirements.txt
