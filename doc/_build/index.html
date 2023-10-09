@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation du projet 13 Dev Ptyhon OC MD &mdash; Documentation P13_Oc </title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d1a510d7"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=d99ca74e"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="#">
+            
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Documentation du projet 13 Dev Ptyhon OC MD</a><ul>
+<li><a class="reference internal" href="#description-du-projet-p13">Description du projet P13</a></li>
+<li><a class="reference internal" href="#installation-de-l-application-et-des-outils-necessaires">Installation de l’application et des outils nécessaires</a><ul>
+<li><a class="reference internal" href="#demarrage-du-projet">Démarrage du projet</a></li>
+<li><a class="reference internal" href="#creer-un-environnement-virtuel-et-installer-les-dependances">Créer un environnement virtuel et installer les dépendances</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#demarrage-rapide-executer-l-application">Démarrage rapide : Exécuter l’application</a></li>
+<li><a class="reference internal" href="#base-de-donnees-et-structure-des-modeles">Base de données et structure des modèles</a></li>
+<li><a class="reference internal" href="#base-de-donnees-sqlite3">Base de données SQLite3</a></li>
+<li><a class="reference internal" href="#contenu-de-la-base-de-donnees">Contenu de la base de données</a></li>
+<li><a class="reference internal" href="#description-de-l-api">Description de l’API</a><ul>
+<li><a class="reference internal" href="#en-cas-d-erreur-sentry">En cas d’erreur: Sentry</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ci-cd-pipeline">CI/CD Pipeline</a><ul>
+<li><a class="reference internal" href="#outils">Outils :</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">P13_Oc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Documentation du projet 13 Dev Ptyhon OC MD</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="documentation-du-projet-13-dev-ptyhon-oc-md">
+<h1>Documentation du projet 13 Dev Ptyhon OC MD<a class="headerlink" href="#documentation-du-projet-13-dev-ptyhon-oc-md" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="description-du-projet-p13">
+<h2>Description du projet P13<a class="headerlink" href="#description-du-projet-p13" title="Link to this heading"></a></h2>
+<p>Orange County Lettings est une start-up dans le secteur de la location immobilière. La start-up, au milieu d’une phase d’expansion aux États-Unis, a embauché des développeurs pour améliorer leur site Web (l’application Django réelle dans ce projet).</p>
+<p>Parmi les améliorations apportées aux travaux sur:</p>
+<ol class="arabic simple">
+<li><p>Réduction de diverses dettes techniques sur le projet</p></li>
+<li><p>Refonte de l’architecture modulaire</p></li>
+<li><p>Ajout d’un pipeline CI/CD et le déploiement</p></li>
+<li><p>Surveillance de l’application et suivi des erreurs via Sentry.</p></li>
+</ol>
+</section>
+<section id="installation-de-l-application-et-des-outils-necessaires">
+<h2>Installation de l’application et des outils nécessaires<a class="headerlink" href="#installation-de-l-application-et-des-outils-necessaires" title="Link to this heading"></a></h2>
+<p>Ce dont vous aurez besoin :</p>
+<ul class="simple">
+<li><p>git : installer la dernière version stable de git à partir de <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p></li>
+<li><p>(facultatif) Un compte GitHub: <a class="reference external" href="https://github.com/">https://github.com/</a></p></li>
+<li><p>Python: installer la dernière version stable de Python à partir de <a class="reference external" href="https://www.python.org/">https://www.python.org/</a></p></li>
+</ul>
+<p>Si vous planifiez une utilisation de la production, vous aurez besoin de :</p>
+<ul class="simple">
+<li><p>Docker: <a class="reference external" href="https://www.docker.com/">https://www.docker.com/</a></p></li>
+<li><p>Compte docker-hub: <a class="reference external" href="https://hub.docker.com/">https://hub.docker.com/</a></p></li>
+</ul>
+<p>Si vous voulez le deployer en ligne , vous aurez besoin de :</p>
+<ul class="simple">
+<li><p>Azur : <a class="reference external" href="https://azure.microsoft.com/fr-fr">https://azure.microsoft.com/fr-fr</a></p></li>
+</ul>
+<section id="demarrage-du-projet">
+<h3>Démarrage du projet<a class="headerlink" href="#demarrage-du-projet" title="Link to this heading"></a></h3>
+<p><strong>CLONING</strong>:</p>
+<p>Pour cloner le référentiel, créez d’abord un dossier où vous voulez qu’il soit installé. Ouvrez votre terminal , allez dans ce dossier (cd C:yourpathyourfolder) et initialisez git en tapant <cite>git init</cite>.</p>
+<p>Vous pouvez maintenant obtenir l’application en clonant le référentiel :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/WolfSilver0509/OC_P13_V2.git
+</pre></div>
+</div>
+<p><strong>TÉLÉCHARGEMENT</strong>:</p>
+<p>Allez sur <a class="reference external" href="https://github.com/WolfSilver0509/OC_P13_V2.git">https://github.com/WolfSilver0509/OC_P13_V2.git</a>, cliquez sur le bouton vert « Code » et choisissez « Télécharger le zip ». Extrayez le fichier zip où vous voulez que l’application soit.</p>
+</section>
+<section id="creer-un-environnement-virtuel-et-installer-les-dependances">
+<h3>Créer un environnement virtuel et installer les dépendances<a class="headerlink" href="#creer-un-environnement-virtuel-et-installer-les-dependances" title="Link to this heading"></a></h3>
+<p>Une fois fais dans votre PC, par le biais de votre terminal, allez dans ce répertoire et créez un environnement virtuel:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>OpenClassrooms-Project-13
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv<span class="w">  </span>-<span class="w"> </span>pour<span class="w"> </span>crée<span class="w"> </span>l<span class="err">&#39;</span>environnement<span class="w"> </span>virtuel<span class="w"> </span>pour<span class="w"> </span>le<span class="w"> </span>projet
+</pre></div>
+</div>
+<p>Activation de l’environnement virtuel:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>venv/Scripts/activate
+</pre></div>
+</div>
+<p>Installer les modules nécessaires:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</section>
+</section>
+<section id="demarrage-rapide-executer-l-application">
+<h2>Démarrage rapide : Exécuter l’application<a class="headerlink" href="#demarrage-rapide-executer-l-application" title="Link to this heading"></a></h2>
+<p><strong>Démarrage de l’application par Python</strong>:</p>
+<p>Pour démarrer le serveur, dans votre terminal (vous devez être dans le dossier racine de l’application où se trouve “manage.py”):</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>runserver
+</pre></div>
+</div>
+<p>Vous devriez recevoir un message similaire à celui-ci :</p>
+<p>System check identified 3 issues (0 silenced).
+October 09, 2023 - 18:51:53
+Django version 4.2.6, using settings “oc_lettings_site.settings”
+Starting development server at <a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>
+Quit the server with CTRL-BREAK.</p>
+<p>Ouvrez votre navigateur et connectez-vous sur l’url via <a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> ou <a class="reference external" href="http://localhost:8000/">http://localhost:8000/</a></p>
+<p>Pour arrêter le serveur, appuyez sur CTRL-C dans le terminal.</p>
+<p><strong>Démarrage de l’application via Docker</strong>:</p>
+<p>Vous pouvez démarrer l’application en utilisant un conteneur Docker. Pour ce faire, démarrez Docker (s’il ne fonctionne pas déjà en arrière-plan).</p>
+<p>Téléchargez l’image en ouvrant le fichier batch « dogcker-pull-image.bat ». Saisissez votre nom d’utilisateur et votre mot de passe. Si vous pouviez vous connecter avec succès, on vous demandera si vous souhaitez télécharger l’image. Tapez «y», appuyez sur ENTER et attendez que l’image ait été téléchargée. Le programme vous déconnectera automatiquement une fois le téléchargement terminé.</p>
+<p>Vous ne verrez PAS de nouveau fichier dans votre dossier. Au lieu de cela, l’image est automatiquement téléchargée dans le dossier correspondant d’un Docker et apparaîtra directement dans le logiciel Docker Desktop.</p>
+<p>Pour voir l’image vous pouvez également taper dans le shell « docker images » cela vous montrera les images crée sur docker.</p>
+<p>Revenez au logiciel Docker, sélectionnez l’onglet « Images », et vous devriez voir l’image fraîchement téléchargée nommée « glaxer / docker_oc_lettings » avec l’étiquette « latest ».</p>
+<p>Cliquez sur le bouton « exécuter »  et dans les réglages optionnels, tapez « 8000 » dans l’onglet « Ports », puis cliquez sur « Exécuter ».</p>
+<p>Un nouveau conteneur est créé, et l’image est en cours d’exécution. Vous devriez voir des lignes similaires à celles ci-dessus et quelques choses sur le dossier /static/:</p>
+<p>System check identified 3 issues (0 silenced).
+October 09, 2023 - 18:51:53
+Django version 4.2.6, using settings “oc_lettings_site.settings”
+Starting development server at <a class="reference external" href="http://0.0.0.0.0.0:8000/">http://0.0.0.0.0.0:8000/</a>
+…
+2023-10-09 21:49:14 [09/Oct/2023 19:00:14) “GET /static/assets/img/logo.png HT/1.1” 200 27037</p>
+<p>Ouvrez votre navigateur et connectez-vous à l’application via <a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> ou <a class="reference external" href="http://localhost:8000/">http://localhost:8000/</a></p>
+<p>Une fois que vous avez terminé, vous pouvez soit appuyer sur le bouton d’arrêt (le carré), soit appuyer directement sur la poubelle, ce qui arrêtera la course et supprimera le conteneur actuel.</p>
+</section>
+<section id="base-de-donnees-et-structure-des-modeles">
+<h2>Base de données et structure des modèles<a class="headerlink" href="#base-de-donnees-et-structure-des-modeles" title="Link to this heading"></a></h2>
+</section>
+<section id="base-de-donnees-sqlite3">
+<h2>Base de données SQLite3<a class="headerlink" href="#base-de-donnees-sqlite3" title="Link to this heading"></a></h2>
+<p>SQLite est une bibliothèque C qui fournit une base de données légère basée sur le disque qui ne nécessite pas un processus de serveur séparé et permet d’accéder à la base de données en utilisant une variante non standard du langage de requête SQL. Il s’agit d’une base de données SQL autonome, basée sur des fichiers.
+En tant que tel, nous n’avons pas besoin d’installer de modules ou de logiciels supplémentaires au fur et à mesure qu’il est fourni avec Python, et Django l’utilise nativement lors de la création d’un nouveau projet.</p>
+</section>
+<section id="contenu-de-la-base-de-donnees">
+<h2>Contenu de la base de données<a class="headerlink" href="#contenu-de-la-base-de-donnees" title="Link to this heading"></a></h2>
+<p>Il y a 3 objets principaux dans la base de données:</p>
+<p>Profile
+Profils des utilisateurs/clients.
+Chaque profil a un id (non affiché), un favori-city et un utilisateur-id (non affiché).
+Un profil affiche certaines des informations de l’utilisateur stockées dans la table « utilisateur d’auth-utilisateur » : prénom, nom, adresse électronique et ville préférée.</p>
+<p>Letting
+Propriétés Listed où leur titre correspondant est affiché.
+Chaque letting a un id (non affiché), un titre, et est lié à une adresse-id (non affichée, voir ci-dessous).</p>
+<p>Adresse
+Adresses de chaque bien.
+Une adresse a un id (non affiché), un numéro, une rue, une ville, un état, un code postal et un code ISO de pays.</p>
+</section>
+<section id="description-de-l-api">
+<h2>Description de l’API<a class="headerlink" href="#description-de-l-api" title="Link to this heading"></a></h2>
+<p>L’API se compose de 4 applications :</p>
+<ol class="arabic simple">
+<li><p>Le site d’accueil, qui s’occupe de la section d’administration et relie les 3 autres applications ensemble.</p></li>
+<li><p>Homeapp, qui gère la page principal d’index</p></li>
+<li><p>Lettings, qui gère la page principale des locations ainsi que chaque page.</p></li>
+<li><p>Profile, qui gère la page principale des profils ainsi que chaque page de profil individuel.</p></li>
+</ol>
+<section id="en-cas-d-erreur-sentry">
+<h3>En cas d’erreur: Sentry<a class="headerlink" href="#en-cas-d-erreur-sentry" title="Link to this heading"></a></h3>
+<p>Sentry a été mis en œuvre afin d’avertir l’administrateur en tout état de cause que des erreurs devaient se produire. Il est possible de renvoyer des erreurs personnalisées, ce qui a été fait en cas de « mauvaise demande » ou d’erreur 500. Cela se produit lorsque l’utilisateur entre une URL invalide qui cible un objet qui n’existe pas dans la base de données.
+Les erreurs sont répertorier comme demander dans un projet sentry qui stock les divers erreurs fournis. Dans ce projet j’ai crée une url ( /sentry-debug )qui déclenche une erreur sentry afin de voir le bon déroulement pour capter des erreurs.</p>
+</section>
+</section>
+<section id="ci-cd-pipeline">
+<h2>CI/CD Pipeline<a class="headerlink" href="#ci-cd-pipeline" title="Link to this heading"></a></h2>
+<p>Déploiement :</p>
+<section id="outils">
+<h3>Outils :<a class="headerlink" href="#outils" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Github action ( workflow.yml )</p></li>
+<li><p>Docker</p></li>
+<li><p>Docker hub</p></li>
+<li><p>Azure</p></li>
+</ul>
+<p>Le déploiement de mon projet Django est un processus automatisé qui comprend plusieurs étapes essentielles pour garantir un déploiement réussi. Voici les points clés à prendre en compte :</p>
+<p>Configuration Requise :</p>
+<ul class="simple">
+<li><p>GitHub Actions : Configurer un dossier .github dans le dépôt avec un fichier workflow.yml. Ce fichier contient des actions GitHub qui automatisent le processus de déploiement.</p></li>
+<li><p>Tests et Linting : Le workflow GitHub commence par l’exécution de tests et de linters pour garantir que le projet fonctionne correctement et suit les bonnes pratiques de codage (flake8).</p></li>
+<li><p>Docker Image : On créé un fichier Dockerfile dans le projet Django pour créer une image Docker de l’application. Cette image doit être construite conformément à des spécifications spécifiques, telles que le type d’image et la version de Python.</p></li>
+<li><p>Variables Chiffrées : On utilise des variables chiffrées, également connues sous le nom de « variables de l’environnement » ou « variables secrètes », stockées en ligne sur « variable secrete github ». Ces variables contiennent des informations sensibles nécessaires pour la configuration de l’application, mais elles ne sont pas accessibles au public.</p></li>
+</ul>
+<p>Étapes du Déploiement :</p>
+<ul class="simple">
+<li><p>GitHub Actions : Lorsqu’un push est effectué sur la branche « master » du dépôt GitHub, le workflow démarre automatiquement. Il commence par l’exécution de tests pour vérifier que le code est fonctionnel et qu’il n’y a pas d’erreurs.</p></li>
+<li><p>Linting : Ensuite, le workflow vérifie la qualité du code en exécutant un linter pour s’assurer que le code suit les normes de codage (flake8).</p></li>
+<li><p>Build et Push de l’Image Docker : Si les tests et le linting sont réussis, le workflow passe à la construction de l’image Docker à partir du Dockerfile du projet Django.</p></li>
+<li><p>Docker Hub : Cette image est ensuite poussée vers Docker Hub pour la rendre disponible en ligne.</p></li>
+<li><p>Azure App Service : On configure un service Azure App Service pour déployer l’application. Les paramètres requis, tels que le type de conteneur Docker, ont été correctement configurés.</p></li>
+<li><p>Webhook : Chaque fois qu’une nouvelle image est poussée vers Docker Hub, elle déclenche un webhook qui informe Azure de la disponibilité de la nouvelle image.</p></li>
+<li><p>Déploiement Automatique : Azure récupère automatiquement la nouvelle image Docker depuis Docker Hub et la déploie sur Azure App Service. Cette étape assure que l’application est toujours à jour avec la dernière version.</p></li>
+</ul>
+<p>En résumé, le processus de déploiement automatique commence par des tests et du linting sur GitHub, puis construit et pousse une image Docker sur Docker Hub. Azure surveille Docker Hub grâce à un webhook et met à jour automatiquement l’application sur Azure App Service à chaque nouvelle version de l’image. Ce processus garantit que l’application Django est continuellement mise à jour et fonctionne correctement en production.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Assurez-vous d’avoir toutes les dépendances et les configurations nécessaires en place avant de lancer le déploiement.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2023, Myriam Denizot.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

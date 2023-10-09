@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CI/CD Pipeline &mdash; Documentation P13_Oc </title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d1a510d7"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=d99ca74e"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">CI/CD Pipeline</a><ul>
+<li><a class="reference internal" href="#outils">Outils :</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">P13_Oc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">CI/CD Pipeline</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/ci_cd_pipeline.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ci-cd-pipeline">
+<h1>CI/CD Pipeline<a class="headerlink" href="#ci-cd-pipeline" title="Link to this heading"></a></h1>
+<p>Déploiement :</p>
+<section id="outils">
+<h2>Outils :<a class="headerlink" href="#outils" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Github action ( workflow.yml )</p></li>
+<li><p>Docker</p></li>
+<li><p>Docker hub</p></li>
+<li><p>Azure</p></li>
+</ul>
+<p>Le déploiement de mon projet Django est un processus automatisé qui comprend plusieurs étapes essentielles pour garantir un déploiement réussi. Voici les points clés à prendre en compte :</p>
+<p>Configuration Requise :</p>
+<ul class="simple">
+<li><p>GitHub Actions : Configurer un dossier .github dans le dépôt avec un fichier workflow.yml. Ce fichier contient des actions GitHub qui automatisent le processus de déploiement.</p></li>
+<li><p>Tests et Linting : Le workflow GitHub commence par l’exécution de tests et de linters pour garantir que le projet fonctionne correctement et suit les bonnes pratiques de codage (flake8).</p></li>
+<li><p>Docker Image : On créé un fichier Dockerfile dans le projet Django pour créer une image Docker de l’application. Cette image doit être construite conformément à des spécifications spécifiques, telles que le type d’image et la version de Python.</p></li>
+<li><p>Variables Chiffrées : On utilise des variables chiffrées, également connues sous le nom de « variables de l’environnement » ou « variables secrètes », stockées en ligne sur « variable secrete github ». Ces variables contiennent des informations sensibles nécessaires pour la configuration de l’application, mais elles ne sont pas accessibles au public.</p></li>
+</ul>
+<p>Étapes du Déploiement :</p>
+<ul class="simple">
+<li><p>GitHub Actions : Lorsqu’un push est effectué sur la branche « master » du dépôt GitHub, le workflow démarre automatiquement. Il commence par l’exécution de tests pour vérifier que le code est fonctionnel et qu’il n’y a pas d’erreurs.</p></li>
+<li><p>Linting : Ensuite, le workflow vérifie la qualité du code en exécutant un linter pour s’assurer que le code suit les normes de codage (flake8).</p></li>
+<li><p>Build et Push de l’Image Docker : Si les tests et le linting sont réussis, le workflow passe à la construction de l’image Docker à partir du Dockerfile du projet Django.</p></li>
+<li><p>Docker Hub : Cette image est ensuite poussée vers Docker Hub pour la rendre disponible en ligne.</p></li>
+<li><p>Azure App Service : On configure un service Azure App Service pour déployer l’application. Les paramètres requis, tels que le type de conteneur Docker, ont été correctement configurés.</p></li>
+<li><p>Webhook : Chaque fois qu’une nouvelle image est poussée vers Docker Hub, elle déclenche un webhook qui informe Azure de la disponibilité de la nouvelle image.</p></li>
+<li><p>Déploiement Automatique : Azure récupère automatiquement la nouvelle image Docker depuis Docker Hub et la déploie sur Azure App Service. Cette étape assure que l’application est toujours à jour avec la dernière version.</p></li>
+</ul>
+<p>En résumé, le processus de déploiement automatique commence par des tests et du linting sur GitHub, puis construit et pousse une image Docker sur Docker Hub. Azure surveille Docker Hub grâce à un webhook et met à jour automatiquement l’application sur Azure App Service à chaque nouvelle version de l’image. Ce processus garantit que l’application Django est continuellement mise à jour et fonctionne correctement en production.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Assurez-vous d’avoir toutes les dépendances et les configurations nécessaires en place avant de lancer le déploiement.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2023, Myriam Denizot.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

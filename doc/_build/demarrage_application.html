@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Démarrage du projet &mdash; Documentation P13_Oc </title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d1a510d7"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=d99ca74e"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Démarrage du projet</a></li>
+<li><a class="reference internal" href="#creer-un-environnement-virtuel-et-installer-les-dependances">Créer un environnement virtuel et installer les dépendances</a><ul>
+<li><a class="reference internal" href="#demarrage-rapide-executer-l-application">Démarrage rapide : Exécuter l’application</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">P13_Oc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Démarrage du projet</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/demarrage_application.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="demarrage-du-projet">
+<h1>Démarrage du projet<a class="headerlink" href="#demarrage-du-projet" title="Link to this heading"></a></h1>
+<p><strong>CLONING</strong>:</p>
+<p>Pour cloner le référentiel, créez d’abord un dossier où vous voulez qu’il soit installé. Ouvrez votre terminal , allez dans ce dossier (cd C:yourpathyourfolder) et initialisez git en tapant <cite>git init</cite>.</p>
+<p>Vous pouvez maintenant obtenir l’application en clonant le référentiel :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/WolfSilver0509/OC_P13_V2.git
+</pre></div>
+</div>
+<p><strong>TÉLÉCHARGEMENT</strong>:</p>
+<p>Allez sur <a class="reference external" href="https://github.com/WolfSilver0509/OC_P13_V2.git">https://github.com/WolfSilver0509/OC_P13_V2.git</a>, cliquez sur le bouton vert « Code » et choisissez « Télécharger le zip ». Extrayez le fichier zip où vous voulez que l’application soit.</p>
+</section>
+<section id="creer-un-environnement-virtuel-et-installer-les-dependances">
+<h1>Créer un environnement virtuel et installer les dépendances<a class="headerlink" href="#creer-un-environnement-virtuel-et-installer-les-dependances" title="Link to this heading"></a></h1>
+<p>Une fois fais dans votre PC, par le biais de votre terminal, allez dans ce répertoire et créez un environnement virtuel:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>OpenClassrooms-Project-13
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv<span class="w">  </span>-<span class="w"> </span>pour<span class="w"> </span>crée<span class="w"> </span>l<span class="err">&#39;</span>environnement<span class="w"> </span>virtuel<span class="w"> </span>pour<span class="w"> </span>le<span class="w"> </span>projet
+</pre></div>
+</div>
+<p>Activation de l’environnement virtuel:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>venv/Scripts/activate
+</pre></div>
+</div>
+<p>Installer les modules nécessaires:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<section id="demarrage-rapide-executer-l-application">
+<h2>Démarrage rapide : Exécuter l’application<a class="headerlink" href="#demarrage-rapide-executer-l-application" title="Link to this heading"></a></h2>
+<p><strong>Démarrage de l’application par Python</strong>:</p>
+<p>Pour démarrer le serveur, dans votre terminal (vous devez être dans le dossier racine de l’application où se trouve “manage.py”):</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>runserver
+</pre></div>
+</div>
+<p>Vous devriez recevoir un message similaire à celui-ci :</p>
+<p>System check identified 3 issues (0 silenced).
+October 09, 2023 - 18:51:53
+Django version 4.2.6, using settings “oc_lettings_site.settings”
+Starting development server at <a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>
+Quit the server with CTRL-BREAK.</p>
+<p>Ouvrez votre navigateur et connectez-vous sur l’url via <a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> ou <a class="reference external" href="http://localhost:8000/">http://localhost:8000/</a></p>
+<p>Pour arrêter le serveur, appuyez sur CTRL-C dans le terminal.</p>
+<p><strong>Démarrage de l’application via Docker</strong>:</p>
+<p>Vous pouvez démarrer l’application en utilisant un conteneur Docker. Pour ce faire, démarrez Docker (s’il ne fonctionne pas déjà en arrière-plan).</p>
+<p>Téléchargez l’image en ouvrant le fichier batch « dogcker-pull-image.bat ». Saisissez votre nom d’utilisateur et votre mot de passe. Si vous pouviez vous connecter avec succès, on vous demandera si vous souhaitez télécharger l’image. Tapez «y», appuyez sur ENTER et attendez que l’image ait été téléchargée. Le programme vous déconnectera automatiquement une fois le téléchargement terminé.</p>
+<p>Vous ne verrez PAS de nouveau fichier dans votre dossier. Au lieu de cela, l’image est automatiquement téléchargée dans le dossier correspondant d’un Docker et apparaîtra directement dans le logiciel Docker Desktop.</p>
+<p>Pour voir l’image vous pouvez également taper dans le shell « docker images » cela vous montrera les images crée sur docker.</p>
+<p>Revenez au logiciel Docker, sélectionnez l’onglet « Images », et vous devriez voir l’image fraîchement téléchargée nommée « glaxer / docker_oc_lettings » avec l’étiquette « latest ».</p>
+<p>Cliquez sur le bouton « exécuter »  et dans les réglages optionnels, tapez « 8000 » dans l’onglet « Ports », puis cliquez sur « Exécuter ».</p>
+<p>Un nouveau conteneur est créé, et l’image est en cours d’exécution. Vous devriez voir des lignes similaires à celles ci-dessus et quelques choses sur le dossier /static/:</p>
+<p>System check identified 3 issues (0 silenced).
+October 09, 2023 - 18:51:53
+Django version 4.2.6, using settings “oc_lettings_site.settings”
+Starting development server at <a class="reference external" href="http://0.0.0.0.0.0:8000/">http://0.0.0.0.0.0:8000/</a>
+…
+2023-10-09 21:49:14 [09/Oct/2023 19:00:14) “GET /static/assets/img/logo.png HT/1.1” 200 27037</p>
+<p>Ouvrez votre navigateur et connectez-vous à l’application via <a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> ou <a class="reference external" href="http://localhost:8000/">http://localhost:8000/</a></p>
+<p>Une fois que vous avez terminé, vous pouvez soit appuyer sur le bouton d’arrêt (le carré), soit appuyer directement sur la poubelle, ce qui arrêtera la course et supprimera le conteneur actuel.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2023, Myriam Denizot.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
