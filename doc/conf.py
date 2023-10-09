@@ -41,4 +41,3 @@ html_footer = '''
     <p>&copy; {}</p>
 </div>
 '''.format(author)
-
