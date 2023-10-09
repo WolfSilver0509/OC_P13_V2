@@ -13,7 +13,7 @@ build:
 
 # Construisez la documentation dans le répertoire "docs/" avec Sphinx
 sphinx:
-   configuration: docs/conf.py
+   configuration: doc/conf.py
 
 
 python:
