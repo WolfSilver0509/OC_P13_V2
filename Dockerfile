@@ -1,6 +1,11 @@
 # Utilisez une image de base Python
 FROM python:3.9
 
+# Définissez les arguments de construction pour les variables d'environnement
+ARG DEBUG
+ARG SECRET_KEY
+ARG DNS
+
 # Définissez le répertoire de travail dans le conteneur
 WORKDIR /app
 
