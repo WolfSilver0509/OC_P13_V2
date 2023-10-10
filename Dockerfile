@@ -1,16 +1,16 @@
 # Utilisez une image de base Python
 FROM python:3.9
 
-# Définissez les arguments de construction pour les variables d'environnement
-ARG DEBUG
-ARG SECRET_KEY
-ARG DNS
+# Définissez les variables d'environnement directement dans le Dockerfile
+ENV DEBUG=${DEBUG}
+ENV SECRET_KEY=${SECRET_KEY}
+ENV DNS=${DNS}
 
 # Définissez le répertoire de travail dans le conteneur
 WORKDIR /app
 
 # Copiez le contenu du répertoire de votre projet Django dans le conteneur
-COPY  . .
+COPY . .
 
 COPY static /app/static
 
@@ -25,11 +25,6 @@ RUN python manage.py collectstatic --noinput
 
 # Exposez le port sur lequel l'application Django s'exécute
 EXPOSE 8000
-
-# Définissez les variables d'environnement directement dans le Dockerfile
-ENV DEBUG=${DEBUG}
-ENV SECRET_KEY=${SECRET_KEY}
-ENV DNS=${DNS}
 
 # Lancez l'application Django en utilisant des variables d'environnement
 CMD ["sh", "-c", "python manage.py runserver 0.0.0.0:8000"]
