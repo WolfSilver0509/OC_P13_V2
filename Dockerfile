@@ -15,11 +15,16 @@ RUN pip install -r requirements.txt
 # Exécutez les migrations et créez la base de données
 RUN python manage.py migrate
 
-# Permet de prendre les fichier statics et les déposer dans static files
-Run python manage.py collectstatic --noinput
+# Permettez de prendre les fichiers statiques et de les déposer dans static files
+RUN python manage.py collectstatic --noinput
 
 # Exposez le port sur lequel l'application Django s'exécute
 EXPOSE 8000
 
-# Lancez l'application Django
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# Définissez les variables d'environnement directement dans le Dockerfile
+ENV DEBUG=${DEBUG}
+ENV SECRET_KEY=${SECRET_KEY}
+ENV DNS=${DNS}
+
+# Lancez l'application Django en utilisant des variables d'environnement
+CMD ["sh", "-c", "python manage.py runserver 0.0.0.0:8000"]
