@@ -53,6 +53,6 @@ jobs:
         - name: Build and Push Docker image
           run: |
             docker build -t glaxer/docker_oc_lettings:latest .
-            docker tag docker_oc_lettings:latest glaxer/docker_oc_lettings
+            docker tag glaxer/docker_oc_lettings:latest glaxer/docker_oc_lettings
             docker push glaxer/docker_oc_lettings:latest
 
