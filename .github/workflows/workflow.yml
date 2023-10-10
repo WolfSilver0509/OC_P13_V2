@@ -52,6 +52,6 @@ jobs:
           run: |
             docker build -t docker_oc_lettings:latest .
             docker tag docker_oc_lettings:latest glaxer/docker_oc_lettings:latest
-            docker run -e SECRET_DEBUG="${{ secrets.DEBUG }}" -e SECRET_SECRET_KEY="${{ secrets.SECRET_KEY }}" glaxer/docker_oc_lettings:latest
+            docker run -e DEBUG="${{ secrets.DEBUG }}" -e SECRET_KEY="${{ secrets.SECRET_KEY }}" glaxer/docker_oc_lettings:latest
             docker push glaxer/docker_oc_lettings:latest
 
