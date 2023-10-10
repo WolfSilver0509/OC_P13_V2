@@ -18,9 +18,9 @@ RUN python manage.py migrate
 # Permet de prendre les fichier statics et les déposer dans static files
 Run python manage.py collectstatic --noinput
 
-# Définissez les variables d'environnement secrètes (remplacez ces valeurs par les noms de vos secrets)
-ENV DEBUG=${SECRET_DEBUG} \
-    SECRET_KEY=${SECRET_SECRET_KEY}
+# Définissez les variables d'environnement secrètes en utilisant la syntaxe ${} pour accéder aux secrets de GitHub
+ENV DEBUG=${ secrets.DEBUG } \
+    SECRET_KEY=${ secrets.SECRET_KEY }
 
 
 # Exposez le port sur lequel l'application Django s'exécute
