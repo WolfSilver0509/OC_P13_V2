@@ -2,6 +2,9 @@
 FROM python:3.9
 
 # Définissez les variables d'environnement directement dans le Dockerfile
+ARG DEBUG
+ARG SECRET_KEY
+ARG DNS
 ENV DEBUG=${DEBUG}
 ENV SECRET_KEY=${SECRET_KEY}
 ENV DNS=${DNS}
