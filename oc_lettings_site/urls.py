@@ -1,9 +1,11 @@
 from django.contrib import admin
 from django.urls import path, include
-
+from django.shortcuts import render
 
 def trigger_error(request):
     _ = 1 / 0
+    return render(request, 'templates/error500.html')
+
 
 
 urlpatterns = [
