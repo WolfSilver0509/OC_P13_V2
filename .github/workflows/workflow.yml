@@ -54,7 +54,7 @@ jobs:
           docker build -t docker_oc_lettings:latest \
             --build-arg DEBUG=${DEBUG} \
             --build-arg SECRET_KEY=${SECRET_KEY} \
-            --build-arg DNS=${secrets.DNS} \
+            --build-arg DNS=${DNS} \
             .
           docker tag docker_oc_lettings:latest glaxer/docker_oc_lettings:latest
           docker push glaxer/docker_oc_lettings:latest
