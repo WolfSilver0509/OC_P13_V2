@@ -47,7 +47,6 @@ jobs:
             cat .env
         - name: Login to Docker Hub
           run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-
         - name: Build and Push Docker image
           run: |
             docker build -t docker_oc_lettings:latest .
