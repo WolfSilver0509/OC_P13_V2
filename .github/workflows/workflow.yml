@@ -42,21 +42,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Create Docker Buildx
-        run: |
-          docker run --rm --privileged ghcr.io/docker/buildx-bin
-
       - name: Login to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and Push Docker image
         run: |
-          docker buildx create --use
-          docker buildx build -t docker_oc_lettings:latest \
+          docker build -t docker_oc_lettings:latest \
             --build-arg DEBUG=${{ secrets.DEBUG }} \
             --build-arg SECRET_KEY=${{ secrets.SECRET_KEY }} \
-            --build-arg DNS=${{ secrets.DNS }} \
-            --platform linux/amd64 \
-            -o type=registry,repository=glaxer/docker_oc_lettings:latest .
-
-          docker buildx stop
+            --build-arg DNS=${{ secrets.DNS}} .
+          docker tag docker_oc_lettings:latest glaxer/docker_oc_lettings:latest
+          docker push glaxer/docker_oc_lettings:latest
