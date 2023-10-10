@@ -34,6 +34,27 @@ jobs:
       - name: Run litting
         run: flake8
 
+    - name: Build and Push Docker image
+      env:
+        DEBUG: ${{ secrets.DEBUG }}
+        SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        DNS: ${{ secrets.DNS }}
+      run: |
+        # Générez le fichier .env dans le répertoire du projet
+        echo DEBUG=${DEBUG} > .env
+        echo SECRET_KEY=${SECRET_KEY} >> .env
+        echo DNS=${DNS} >> .env
+        
+        # Copiez le fichier .env dans le conteneur lors de la construction
+        docker build -t docker_oc_lettings:latest \
+          --build-arg DEBUG=${DEBUG} \
+          --build-arg SECRET_KEY=${SECRET_KEY} \
+          --build-arg DNS=${DNS} \
+          --build-arg DOTENV_FILE=.env \  # Ajoutez cette ligne pour copier le fichier .env
+          .
+        docker tag docker_oc_lettings:latest glaxer/docker_oc_lettings:latest
+        docker push glaxer/docker_oc_lettings:latest
+
   docker-build-and-push:
     runs-on: ubuntu-latest
     needs: django-tests
@@ -51,10 +72,17 @@ jobs:
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
           DNS: ${{ secrets.DNS }}
         run: |
+          # Générez le fichier .env dans le répertoire du projet
+          echo DEBUG=${DEBUG} > .env
+          echo SECRET_KEY=${SECRET_KEY} >> .env
+          echo DNS=${DNS} >> .env
+
+          # Copiez le fichier .env dans le conteneur lors de la construction
           docker build -t docker_oc_lettings:latest \
             --build-arg DEBUG=${DEBUG} \
             --build-arg SECRET_KEY=${SECRET_KEY} \
             --build-arg DNS=${DNS} \
+            --build-arg DOTENV_FILE=.env \  # Ajoutez cette ligne pour copier le fichier .env
             .
           docker tag docker_oc_lettings:latest glaxer/docker_oc_lettings:latest
           docker push glaxer/docker_oc_lettings:latest
