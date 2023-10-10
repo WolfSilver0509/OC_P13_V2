@@ -21,7 +21,7 @@ RUN pip install -r requirements.txt
 RUN python manage.py migrate
 
 # Copiez le fichier .env dans le conteneur
-COPY .env /app/.env
+COPY .env .env
 
 # Permettez de prendre les fichiers statiques et de les déposer dans static files
 RUN python manage.py collectstatic --noinput
