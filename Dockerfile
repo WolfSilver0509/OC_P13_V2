@@ -6,6 +6,11 @@ ENV DEBUG=${DEBUG}
 ENV SECRET_KEY=${SECRET_KEY}
 ENV DNS=${DNS}
 
+# Affichez les variables d'environnement pour le débogage
+RUN echo "DEBUG: $DEBUG"
+RUN echo "SECRET_KEY: $SECRET_KEY"
+RUN echo "DNS: $DNS"
+
 # Définissez le répertoire de travail dans le conteneur
 WORKDIR /app
 
