@@ -1,5 +1,19 @@
 Démarrage du projet
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**WARNING**:
+
+N'oubliez pas quand dans un cas comme dans l'autre il vous faut crée un fichier .env à la racine de votre projet et y mettre les variables d'environnement suivantes:
+
+.. code-block:: shell
+
+   SECRET_KEY=your_secret_key
+   DEBUG=your_debug
+   DNS=DNS_FOR_SENTRY,
+
+N'oubliez pas également de rajouter sur votre repository le fichier .env dans le .gitignore afin de ne pas exposer vos secret .
+
+Et rajouter les dans les variables secretes , dans votre repository github dans settings > secrets > new repository secret .
+
 
 **CLONING**:
 

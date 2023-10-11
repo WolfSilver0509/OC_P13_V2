@@ -15,6 +15,7 @@ Le déploiement de mon projet Django est un processus automatisé qui comprend p
 Configuration Requise :
 
 - GitHub Actions : Configurer un dossier .github dans le dépôt avec un fichier workflow.yml. Ce fichier contient des actions GitHub qui automatisent le processus de déploiement.
+- Variables github secrets n'oubliez pas de rajouter vos variables secrets dans le repository github , celle que vous utiliser dans votre workflow.yml.
 - Tests et Linting : Le workflow GitHub commence par l'exécution de tests et de linters pour garantir que le projet fonctionne correctement et suit les bonnes pratiques de codage (flake8).
 - Docker Image : On créé un fichier Dockerfile dans le projet Django pour créer une image Docker de l'application. Cette image doit être construite conformément à des spécifications spécifiques, telles que le type d'image et la version de Python.
 - Variables Chiffrées : On utilise des variables chiffrées, également connues sous le nom de "variables de l'environnement" ou "variables secrètes", stockées en ligne sur "variable secrete github". Ces variables contiennent des informations sensibles nécessaires pour la configuration de l'application, mais elles ne sont pas accessibles au public.
