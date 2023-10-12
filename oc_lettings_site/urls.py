@@ -1,14 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
-from django.shortcuts import render
-
-
-import sentry_sdk
 
 
 def trigger_error(request):
     _ = 1 / 0
-
 
 
 urlpatterns = [
