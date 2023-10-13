@@ -2,8 +2,15 @@ from django.contrib import admin
 from django.urls import path, include
 
 
+import sentry_sdk
+
+
 def trigger_error(request):
-    _ = 1 / 0
+    try:
+        _ = 1 / 0
+    except ZeroDivisionError as e:
+        # Capturer l'erreur et la signaler à Sentry
+        sentry_sdk.capture_exception(e)
 
 
 urlpatterns = [
