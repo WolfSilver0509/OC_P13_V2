@@ -1,5 +1,5 @@
 ===========================
-Documentation du projet 13 Dev Ptyhon OC MD
+Documentation du projet 13 Dev Python OC MD
 ===========================
 
 .. toctree::
